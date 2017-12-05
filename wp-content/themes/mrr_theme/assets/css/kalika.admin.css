@@ -1,0 +1,12 @@
+.kalika-general-form,
+.kalika-sidebar-preview{ display:inline; float:left; }
+.kalika-sidebar-preview{width:280; background-color:#1F1F1F; padding:20px; tex-alignt:center; margin-right:20px;}
+.kalika-sidebar{display:block; text-align:center;}
+h1.kalika-username,
+h2.kalika-phone { font-weight:100; color:#fff; }
+h1.kalika-username{ font-size: 24px; margin:0 0 10px; }
+h2.kalika-phone { font-size: 13px; margin: 0 0 20px; }
+
+.image-container{display:block; width:100%; overflow:hidden; text-align:center;}
+.logo-pics{width:150px; height: 150px; overflow:hidden; border-radius:100%; margin:20; auto;}
+.logo-pics img{width:100%; height: auto;}
