@@ -1,4 +1,5 @@
 <?php
+require_once('wp-bootstrap-navwalker.php');
 require_once(get_template_directory().'/inc/enqueue.php');
 
 //css link from here

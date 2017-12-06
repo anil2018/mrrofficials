@@ -29,6 +29,7 @@
 	</div>
 
 	<main>
+		<div class="container">
 			<section class="sectionbox who clearfix">
 				<?php
                 // check if the repeater field has rows of data
@@ -47,14 +48,15 @@
                 endif;
                 ?> 
 			</section>
+
 			<section class="sectionbox trends clearfix">
 				<h3>
 					Trends
 				</h3>
-				<div class="main-grid ">
+				<div class="main-grid">
 					<div class="grid apple" id="grid" >
-					    <div class="item catch"><a href="#">
-					    	<?php 
+					    <div class="item catch">
+							<?php 
 		                    $images = get_field('trends_images');
 		                    $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
 		                    if( $images ): ?>
@@ -62,54 +64,32 @@
 								<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
 							
 							<?php endforeach; ?>    
-		                    <?php endif; ?></a>
+		                    <?php endif; ?>
 		                </div>
-					    <!--<div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x150" alt="" /></a></div>
-					    <div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x120" alt="" /></a></div>
-					    <div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x50" alt="" /></a></div>
-					    <div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x80" alt="" /></a></div>
-					    <div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x60" alt="" /></a></div>-->
-					</div>
-					<!-- <a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a>
-					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a>
-					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a>
-					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a>
-					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a>
-					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a> -->
+		            </div>
 				</div>
 			</section>
 			<section class="sectionbox bank clearfix">
 				<a href="<?php echo get_site_url(); ?>/bloodgrouppage">
 					Search Blood Nearby to you
-				</a>
+				</a>||
 				<a href="<?php echo get_site_url(); ?>/register-your-blood">
 					Register your blood group
 				</a>
 			</section>
+			
 			<section class="sectionbox recent clearfix">
 				<h3>
 					Recent Events
 				</h3>
-				<div class="seccontent clearfix">
-					<?php
+				<div class="thumbox">
+					  <?php
                        $ptype="event";
                        $the_query = new WP_Query( array( 'post_type'=>$ptype, 'posts_per_page' => 6,'paged' => $paged ) );
-                       if ( $the_query->have_posts() ):
-                       while ( $the_query->have_posts() ):
+                       if ( $the_query->have_posts() ) {
+                       while ( $the_query->have_posts() ) {
                        $the_query->the_post();
-                    ?>
+                       ?>
 					<div class="col-md-2 col-sm-4 col-xs-6 thum">
 						<?php the_post_thumbnail('small-thumbnail'); ?>
 						<div class="thumbox">
@@ -121,16 +101,15 @@
 							</p>
 						</div>
 					</div>
-                    <?php endwhile; endif;?>
-				</div>
+					<?php }} ?>      
+                </div>
 				<div class="secfooter">
 					<a href="#">
 						View More <i class="fa fa-caret-right"></i>
 					</a>
 				</div>
 			</section>
-			
-			
+
 			<section class="sectionbox jobs clearfix">
 				<h3>
 					Jobs Opening
@@ -149,11 +128,11 @@
 					</tr>
 					<div class="fixing">
 					   <?php
-	                       $ptype="career";
-	                       $the_query = new WP_Query( array( 'post_type'=>$ptype, 'posts_per_page' => 3,'paged' => $paged ) );
-	                       if ( $the_query->have_posts() ) {
-	                       while ( $the_query->have_posts() ) {
-	                       $the_query->the_post();
+                       $ptype="career";
+                       $the_query = new WP_Query( array( 'post_type'=>$ptype, 'posts_per_page' => 3,'paged' => $paged ) );
+                       if ( $the_query->have_posts() ) {
+                       while ( $the_query->have_posts() ) {
+                       $the_query->the_post();
                        ?>
 						<tr>
 							<?php
@@ -171,11 +150,12 @@
 							<?php endwhile;
                               else :
                               endif;
-                            ?> 
+                            ?>   	
 						</tr>
 						<?php }} ?>
 					</div>
 				</table>
+				
 				<div class="secfooter">
 					<a href="<?php echo get_site_url(); ?>/career-details">
 						View more
@@ -201,10 +181,10 @@
 
 						<div class="col-md-4 col-sm-4 col-xs-6">
 							<?php //news posts loop begins here
-                            $newspost = new WP_Query('cat=4&posts_per_page=2');
+                        $newspost = new WP_Query('cat=4&posts_per_page=2');
 
-                            if($newspost->have_posts()):
-                            while($newspost->have_posts()): $newspost->the_post(); ?>
+                        if($newspost->have_posts()):
+                        while($newspost->have_posts()): $newspost->the_post(); ?>
 							<?php the_post_thumbnail('small-thumbnail'); ?>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 jbox">
@@ -289,6 +269,6 @@
 					</article>
 				</div>
 			</section>
+		</div>
 	</main>
 <?php get_footer(); ?>
-	

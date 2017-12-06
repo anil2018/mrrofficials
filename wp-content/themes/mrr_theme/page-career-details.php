@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php
                        $ptype="career";
-                       $the_query = new WP_Query( array( 'post_type'=>'career', 'posts_per_page' => 3,'paged' => $paged ) );
+                       $the_query = new WP_Query( array( 'post_type'=>'career', 'posts_per_page' => 10,'paged' => $paged ) );
                        if ( $the_query->have_posts() ) {
                        while ( $the_query->have_posts() ) {
                        $the_query->the_post();

@@ -1,6 +1,7 @@
 <footer>
-		<div class="container-fluid dewan clearfix">
-			<div class="col-md-9 col-sm-9 col-xs-12 clearfix no-padding-left">
+
+		<div class="container clearfix">
+			<div class="col-md-9 col-sm-9 col-xs-12 clearfix">
 				<div class="col-md-2 col-sm-2 col-xs-12 f-logo">
 					<a href="#">
 						<?php $img = esc_attr(get_option('picture')); ?><img src="<?php print $img; ?>" class="logo" alt="img">
@@ -51,14 +52,12 @@
 					</ul>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-12">
-					<p>
-						widget calender
-					</p>
-					<?php if(is_active_sidebar('footer1')): ?>
+					
+				  <?php if(is_active_sidebar('footer1')): ?>
      	            <div class="footer-widget-area">
    	                   <?php dynamic_sidebar('footer1'); ?>
    	                </div>
-   	              <?php endif; ?>
+   	              <?php endif; ?>		
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-3 col-xs-12">
@@ -79,8 +78,10 @@
 	</footer>
 
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.min.js" ></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lightslider.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/bootstrap.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/masonry-docs.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/bootsnav.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/app.js"></script>
 </body>

@@ -1,4 +1,5 @@
-<!doctype html>
+
+<!Doctype html>
 <html lang="en">
 
 <head>
@@ -21,8 +22,6 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/lightslider.min.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.min.js" ></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/masonry-docs.min.js"></script>
 </head>
 <?php
    $logo = esc_attr(get_option('site_logo'));
@@ -41,7 +40,8 @@
 					<?php print $mobile; ?>
 				</a>
 				<form>
-					<?php get_search_form(); ?>	
+					<?php get_search_form(); ?>
+					
 				</form>
 			</div>
 		</div>
@@ -76,5 +76,3 @@
 			</div><!-- /.navbar-collapse -->
 		</div>   
 	</nav>
-
-	

@@ -3,6 +3,7 @@
 //   $('#datetimepicker').datetimepicker();
 // });
 
+
 $(document).ready(function() {
   $('#mSlider').lightSlider({
     item:1,
@@ -25,8 +26,32 @@ $(document).ready(function() {
     pauseOnHover:true,
     enableTouch:true,
     pager:false,
+    responsive : [
+    {
+      breakpoint:5000,
+      settings: {
+        item:2,
+        slideMove:1,
+        slideMargin:6,
+      }
+    },
+    {
+      breakpoint:576,
+      settings: {
+        item:1,
+        slideMove:1,
+        slideMargin:6,
+      }
+    }
+    ]
   });  
+  $('.grid').masonry({
+    // options
+    itemSelector: '.item',
+    columnWidth: 200
+  });
 });
+
 
 // if ($(window).width() < 768) 
 //   $('.find-your-trip').addClass('collapse');

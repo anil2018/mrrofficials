@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------ //
 
 (function ($) {
-	"use strict";
+    "use strict";
     
     var bootsnav = {
         initialize: function() {
@@ -42,15 +42,15 @@
                 var postsArr = new Array(),
                     index = $("nav.brand-center"),
                     $postsList = index.find('ul.navbar-nav');
-				
-				index.prepend("<span class='storage-name' style='display:none;'></span>");
+                
+                index.prepend("<span class='storage-name' style='display:none;'></span>");
                 
                 //Create array of all posts in lists
                 index.find('ul.navbar-nav > li').each(function(){
-					if( $(this).hasClass("active") ){
-						var getElement = $("a", this).eq(0).text();
-						$(".storage-name").html(getElement);
-					}
+                    if( $(this).hasClass("active") ){
+                        var getElement = $("a", this).eq(0).text();
+                        $(".storage-name").html(getElement);
+                    }
                     postsArr.push($(this).html());
                 });
                 
@@ -88,11 +88,11 @@
                     dropDown.closest("li").addClass("dropdown");
                     megaMenu.closest("li").addClass("megamenu-fw");
                 });
-				
-				var getName = $(".storage-name").html();
-				if( !getName == ""  ){
-					$( "ul.navbar-nav > li:contains('" + getName + "')" ).addClass("active");
-				}		
+                
+                var getName = $(".storage-name").html();
+                if( !getName == ""  ){
+                    $( "ul.navbar-nav > li:contains('" + getName + "')" ).addClass("active");
+                }       
             } 
             
             
