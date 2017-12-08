@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+	<div class="main-slide">
 	<div class="mSlider" id="mSlider">
 		<?php
         $images = get_field('main_slider');
@@ -51,49 +52,23 @@
 				<h3>
 					Trends
 				</h3>
-				<div class="main-grid ">
-					<div class="grid apple" id="grid" >
-					    <div class="item catch"><a href="#">
-					    	<?php 
-		                    $images = get_field('trends_images');
-		                    $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-		                    if( $images ): ?>
-		                    <?php foreach( $images as $image ): ?>
-								<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-							
-							<?php endforeach; ?>    
-		                    <?php endif; ?></a>
-		                </div>
-					    <!--<div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x150" alt="" /></a></div>
-					    <div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x120" alt="" /></a></div>
-					    <div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x50" alt="" /></a></div>
-					    <div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x80" alt="" /></a></div>
-					    <div class="item catch"><a href="#"><img src="http://via.placeholder.com/200x60" alt="" /></a></div>-->
-					</div>
-					<!-- <a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a>
+				<div class="main-grid clearfix" id="tSlider">
+					<?php 
+                    $images = get_field('trends_images');
+                    $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                    if( $images ): ?>
+                    <?php foreach( $images as $image ): ?>
 					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
+						<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
 					</a>
-					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a>
-					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a>
-					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a>
-					<a href="#" class="col-md-2 col-sm-4 col-xs-6">
-						<img src="http://via.placeholder.com/150x150" alt="trends">
-					</a> -->
+					<?php endforeach; ?>    
+                    <?php endif; ?>
 				</div>
 			</section>
 			<section class="sectionbox bank clearfix">
 				<a href="<?php echo get_site_url(); ?>/bloodgrouppage">
 					Search Blood Nearby to you
-				</a>
+				</a> ||
 				<a href="<?php echo get_site_url(); ?>/register-your-blood">
 					Register your blood group
 				</a>
@@ -102,15 +77,15 @@
 				<h3>
 					Recent Events
 				</h3>
-				<div class="seccontent clearfix">
-					<?php
+				<div class="seccontent clearfix" id="rSlider">
+					 <!--  <?php
                        $ptype="event";
                        $the_query = new WP_Query( array( 'post_type'=>$ptype, 'posts_per_page' => 6,'paged' => $paged ) );
-                       if ( $the_query->have_posts() ):
-                       while ( $the_query->have_posts() ):
+                       if ( $the_query->have_posts() ) {
+                       while ( $the_query->have_posts() ) {
                        $the_query->the_post();
-                    ?>
-					<div class="col-md-2 col-sm-4 col-xs-6 thum">
+                       ?> -->
+					<div class="thum">
 						<?php the_post_thumbnail('small-thumbnail'); ?>
 						<div class="thumbox">
 							<h4>
@@ -121,8 +96,8 @@
 							</p>
 						</div>
 					</div>
-                    <?php endwhile; endif;?>
-				</div>
+					<?php }} ?>      
+        </div>
 				<div class="secfooter">
 					<a href="#">
 						View More <i class="fa fa-caret-right"></i>

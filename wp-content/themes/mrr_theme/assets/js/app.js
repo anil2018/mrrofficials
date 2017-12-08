@@ -1,4 +1,3 @@
-
 // jQuery(document).ready(function($){
 //   $('#datetimepicker').datetimepicker();
 // });
@@ -16,6 +15,17 @@ $(document).ready(function() {
     pauseOnHover:true,
     enableTouch:true,
   }); 
+	$('#tSlider').lightSlider({
+    item:6,
+    slideMove:2,
+    easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+    margin: 0,
+    speed:600,
+    loop:true,
+    pauseOnHover:true,
+    enableTouch:true,
+    pager:false,
+  });  
   $('#bSlider').lightSlider({
     item:2,
     slideMove:2,
@@ -45,6 +55,17 @@ $(document).ready(function() {
     }
     ]
   });  
+	$('#rSlider').lightSlider({
+    item:6,
+    slideMove:2,
+    easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+    margin: 0,
+    speed:600,
+    loop:true,
+    pauseOnHover:true,
+    enableTouch:true,
+    pager:false,
+  }); 
   $('.grid').masonry({
     // options
     itemSelector: '.item',

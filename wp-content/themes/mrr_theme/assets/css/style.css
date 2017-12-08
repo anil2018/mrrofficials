@@ -315,6 +315,45 @@
 		display: inline-block;
 	}
 /*footer*/
+/*contact*/
+.c-form{
+	padding: 15px;
+	text-align: left;
+	border-radius: 15px;
+	-webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+}
+.c-form label{
+	width: 100%;
+	padding: 10px;
+}
+.c-form input, .c-form textarea{
+	outline: 0;
+	border: 1px solid rgba(0,0,0,0.2);
+	width: 100%;
+	padding: 5px 10px;
+}
+.c-form button{
+	margin: 15px 0;
+	padding: 10px 40px;
+	background-color: var(--pre-c);
+	border: 1px solid var(--pre-c);
+	color: #fff;
+}
+.c-form button:hover, .c-form button:focus{
+	background-color: var(--sec-c);
+	color: #fff;
+} 
+.add{
+	-webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+	box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);75);
+}
+.map{
+	margin-top: 40px;
+}
+/*contact*/
 @media (min-width: 1441px){
 
 }
