@@ -27,9 +27,9 @@ while (have_posts()): the_post(); ?>
    <?php the_post_thumbnail('banner-image'); ?>
    <?php the_content(); ?>
    <div id="contact-form">
-            <h3>Submit the below form</h3>
-            <?php echo do_shortcode('[contact-form-7 id="108" title="Career Form"]'); ?>
-            </div>
+      <h3>Submit the below form</h3>
+      <?php echo do_shortcode('[contact-form-7 id="108" title="Career Form"]'); ?>
+   </div>
 </article>
 <?php endwhile;
 

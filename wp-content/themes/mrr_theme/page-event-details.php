@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<section class="sectionbox jobs clearfix">
 <?php
    $ptype="event";
    $the_query = new WP_Query( array( 'post_type'=>'event', 'posts_per_page' => 10,'paged' => $paged ) );
@@ -12,6 +13,6 @@
    endwhile;
    endif;?>
 <?php }} ?>
-
+</section>
 
 <?php get_footer(); ?>
