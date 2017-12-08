@@ -102,6 +102,7 @@
 				<a href="<?php echo get_site_url(); ?>/event-details">
 					View More <i class="fa fa-caret-right"></i>
 				</a>
+<<<<<<< HEAD
 			</div>
 		</section>
 		<section class="sectionbox jobs clearfix">
@@ -124,6 +125,17 @@
 				   <?php
                        $ptype="career";
                        $the_query = new WP_Query( array( 'post_type'=>$ptype, 'posts_per_page' => 3,'paged' => $paged ) );
+=======
+			</section>
+			<section class="sectionbox recent clearfix">
+				<h3>
+					Recent Events
+				</h3>
+				<div class="seccontent clearfix" id="rSlider">
+					 <!--  <?php
+                       $ptype="event";
+                       $the_query = new WP_Query( array( 'post_type'=>$ptype, 'posts_per_page' => 4,'paged' => $paged ) );
+>>>>>>> f44242996ffabf066cd967e94c5b6afda454cea7
                        if ( $the_query->have_posts() ) {
                        while ( $the_query->have_posts() ) {
                        $the_query->the_post();
