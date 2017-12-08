@@ -25,6 +25,7 @@ $(document).ready(function() {
     pauseOnHover:true,
     enableTouch:true,
     pager:false,
+    
   });  
   $('#bSlider').lightSlider({
     item:2,
@@ -56,7 +57,7 @@ $(document).ready(function() {
     ]
   });  
 	$('#rSlider').lightSlider({
-    item:6,
+    item:4,
     slideMove:2,
     easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
     margin: 0,

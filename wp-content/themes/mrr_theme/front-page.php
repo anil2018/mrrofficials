@@ -80,7 +80,7 @@
 				<div class="seccontent clearfix" id="rSlider">
 					 <!--  <?php
                        $ptype="event";
-                       $the_query = new WP_Query( array( 'post_type'=>$ptype, 'posts_per_page' => 6,'paged' => $paged ) );
+                       $the_query = new WP_Query( array( 'post_type'=>$ptype, 'posts_per_page' => 4,'paged' => $paged ) );
                        if ( $the_query->have_posts() ) {
                        while ( $the_query->have_posts() ) {
                        $the_query->the_post();

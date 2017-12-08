@@ -20,10 +20,11 @@
 
 	}
 	h3{
-		font-size: 40px;
+		font-size: 30px;
 		line-height: 44px;
     	font-family: 'Titillium Web', sans-serif;
-		margin-bottom: 40px;
+		margin-bottom: 30px;
+		font-weight: 700;
 	}
 	h4{
 		font-size: 24px;
@@ -52,8 +53,9 @@
 		overflow-x: hidden;
 	}
 	p {
-		font-size: 16px;
-		line-height: 44px;
+		font-size: 18px;
+		line-height: 26px;
+		color:#666;
 	}
 	a {
 		text-decoration: none;
@@ -196,7 +198,7 @@
 	    z-index: 8;
 	}
 	.lSPager.lSpg{
-		margin: -30px 0 30px !important;
+		margin: -100px 0 0px !important;
 		z-index: 7 !important;
 	}
 /*slider*/
@@ -217,9 +219,6 @@
 	}
 	.thum{
 		padding: 5px;
-	}
-	.thum img{
-		width: 100%;
 	}
 	.secfooter{
 		display: block;
@@ -392,3 +391,8 @@
 
 /** added css  **/
 nav li .caret { display: none; }
+.main-slide #mSlider  img { width:100%; }
+.logo { width: 120px;}
+.thumbox { background: #eee;  padding: 20px;}
+.thumbox h4 a { font-size: 18px; color: #333;}
+.thumbox a { display: inline-block; }
