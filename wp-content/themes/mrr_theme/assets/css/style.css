@@ -1,7 +1,5 @@
 /*DEFAULTS START*/
-	*{
-		font-family: 'Shadows Into Light Two', cursive;
-	}
+	@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600');
 	*, *:before, *:after {
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -15,7 +13,8 @@
 	h1{
 		font-size: 40px;
 		line-height: 44px;
-		font-family: 'Nixie One', cursive;
+		 font-family: 'Titillium Web', sans-serif;
+
 	}
 	h2{
 
@@ -23,13 +22,13 @@
 	h3{
 		font-size: 40px;
 		line-height: 44px;
-		font-family: 'Nixie One', cursive;
+    	font-family: 'Titillium Web', sans-serif;
 		margin-bottom: 40px;
 	}
 	h4{
 		font-size: 24px;
 		line-height: 28px;
-		font-family: 'Josefin Sans', sans-serif;
+		font-family: 'Titillium Web', sans-serif;
 		font-weight: 700;
 	}
 	h5{
@@ -53,7 +52,7 @@
 		overflow-x: hidden;
 	}
 	p {
-		font-size: 30px;
+		font-size: 16px;
 		line-height: 44px;
 	}
 	a {
@@ -142,43 +141,54 @@
 	header form{
 		margin-left: 50px;
 		display: inline-block;
-		border: 1px solid var(--pre-c);
-		border-radius: 5px;
+	
 	}
 	header form input{
 		outline: 0;
 		border: 0;
-		padding: 5px 0 5px 10px;
+		border-radius:0;
+		background: #eee;
+		height:40px;
+		min-width:200px;
+		padding: 0 10px;
+		font-weight:bold;
 	}
 	header form button{
 		padding: 5px 10px;
 		border: 0;
 		outline: 0;
-		background-color: rgba(0,0,0,0);
-		color: var(--pre-c);
+		background-color: #D80526;
+		color: #fff;
+		height:40px;
 	}
 	header a{
 		display: inline-block;
 		font-size: 14px;
 		color: var(--pre-c);
 		font-size: 300;
-		margin-left: 50px;
+		margin-left: 20px;
 	}
 	header a:hover{
 		font-size: 600;
 		color: var(--sec-c);
 		text-decoration: none;
 	}
+	.mail, .phone { color:#666; position:relative; padding-left:25px;}
+	.mail:before, .phone:before{ position: absolute; top:-5px; left:10px; font-family: 'FontAwesome'; content:"\f10b"; font-size:20px;  }
+	.mail:before{ content:'\f003';  font-size: 14px; top:0; left:0;}
 /*header*/
 
 /*nav*/
 	nav.navbar.bootsnav ul.nav > li > a {
-	    padding: 30px 25px;
+	    padding: 30px 18px;
 	    font-weight: 600;
+	    color:#333;
 	}
 	nav.navbar.bootsnav ul.nav > li > a:hover{
-		text-decoration: line-through;
+		color:#D80526;
 	}
+	nav.navbar.bootsnav li.dropdown ul.dropdown-menu { border-top: 5px solid #D80526; }
+	nav.navbar.bootsnav ul.navbar-right li.dropdown ul.dropdown-menu li a:hover{ background:#D80526; color:#fff;  }
 /*nav*/
 
 /*slider*/
@@ -190,7 +200,7 @@
 		z-index: 7 !important;
 	}
 /*slider*/
-
+.sectionbox.who { padding: 50px 20%; }
 .sectionbox{
 	padding: 50px 6%;
 	text-align: center;
@@ -379,3 +389,6 @@
 		width: 100%;
 	}
 }
+
+/** added css  **/
+nav li .caret { display: none; }
